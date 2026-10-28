@@ -1,0 +1,8 @@
+# Pin line endings for every checkout, whatever core.autocrlf is set to. Source text (including the
+# embedded app.manifest) is compiled into the binary, so line endings must be identical for builds
+# of the same commit to be byte-identical.
+* text=auto eol=crlf
+*.png binary
+*.ico binary
+*.exe binary
+*.dll binary

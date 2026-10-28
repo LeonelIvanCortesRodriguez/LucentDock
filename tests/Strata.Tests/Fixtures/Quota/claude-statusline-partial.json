@@ -1,0 +1,9 @@
+{
+  "session_id": "session-FIXTURE-SECRET",
+  "cwd": "C:\\Users\\fixture-person\\code\\secret-project",
+  "model": { "id": "claude-fixture-model", "display_name": "Fixture Model" },
+  "rate_limits": {
+    "seven_day": { "used_percentage": 41.2, "resets_at": 1793559200 },
+    "five_hour": { "used_percentage": "23.5", "resets_at": 1793304080 }
+  }
+}

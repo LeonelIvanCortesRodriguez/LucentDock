@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>Strata</AssemblyName>
+    <RootNamespace>Strata</RootNamespace>
+    <Product>Strata</Product>
+    <Version>1.3.2</Version>
+    <Description>Strata - a native Windows smart dock with live widgets and automations</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Release output must not depend on where the source is checked out: deterministic compilation would
+         otherwise hash local source paths into the assembly identity and PE timestamp. -->
+    <ContinuousIntegrationBuild Condition="'$(Configuration)' == 'Release'">true</ContinuousIntegrationBuild>
+    <PathMap Condition="'$(Configuration)' == 'Release'">$(PathMap);$(MSBuildProjectDirectory)\..\..=/_/</PathMap>
+    <!-- WPF and WinForms share type names (Application, Button, ...). WinForms is only used for the tray icon. -->
+    <NoWarn>$(NoWarn);CA1416;WFO0003</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Precompiled ps_3_0 bytecode (see Effects\LiquidGlass.fx beside it): committed so the build needs no
+         shader compiler; recompile with d3dcompiler_47 only when the .fx changes. -->
+    <Resource Include="Effects\LiquidGlass.ps" />
+  </ItemGroup>
+
+</Project>

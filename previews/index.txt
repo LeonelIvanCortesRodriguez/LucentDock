@@ -1,0 +1,52 @@
+Strata v1.3.0 deterministic preview set
+Every value, app, event, and media item comes from sanitized fixtures.
+
+dock-glass.png  2013x104
+dock-clear.png  2013x104
+dock-dark.png  2013x104
+dock-clear-opacity-0.png  2013x104
+dock-clear-opacity-100.png  2013x104
+dock-glass-fullwidth.png  1976x104
+flyout-weather-glass.png  410x419
+flyout-media-glass.png  420x465
+flyout-calendar-glass.png  420x524
+flyout-todo-glass.png  410x273
+flyout-notes-glass.png  450x419
+flyout-pomodoro-glass.png  390x265
+flyout-quota-glass.png  470x460
+flyout-screentime-glass.png  450x348
+flyout-network-glass.png  410x242
+flyout-cpu-glass.png  410x299
+flyout-ram-glass.png  410x274
+flyout-volume-glass.png  390x324
+flyout-clock-glass.png  420x667
+menu-dock-glass.png  330x303
+menu-app-glass.png  360x223
+flyout-weather-dark.png  410x419
+flyout-media-dark.png  420x465
+flyout-calendar-dark.png  420x524
+flyout-todo-dark.png  410x273
+flyout-notes-dark.png  450x419
+flyout-pomodoro-dark.png  390x265
+flyout-quota-dark.png  470x460
+flyout-screentime-dark.png  450x348
+flyout-network-dark.png  410x242
+flyout-cpu-dark.png  410x299
+flyout-ram-dark.png  410x274
+flyout-volume-dark.png  390x324
+flyout-clock-dark.png  420x667
+menu-dock-dark.png  330x303
+menu-app-dark.png  360x223
+command-palette.png  680x400
+settings-look.png  860x487
+settings-taskbar.png  860x699
+settings-widgets.png  860x1266
+settings-automations.png  860x2839
+settings-activity.png  860x456
+settings-apps.png  860x456
+settings-time.png  860x572
+settings-aiusage.png  860x1263
+settings-privacy.png  860x631
+settings-about.png  860x688
+
+47 images, 0 failures

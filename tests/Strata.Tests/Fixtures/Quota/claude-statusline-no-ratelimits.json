@@ -1,0 +1,6 @@
+{
+  "session_id": "session-FIXTURE-SECRET",
+  "cwd": "C:\\Users\\fixture-person\\code\\secret-project",
+  "model": { "id": "claude-fixture-model", "display_name": "Fixture Model" },
+  "context_window": { "used_percentage": null, "remaining_percentage": null }
+}

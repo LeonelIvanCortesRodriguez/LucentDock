@@ -1,0 +1,13 @@
+# Build outputs
+bin/
+obj/
+TestResults/
+
+# Published app (about 190 MB, rebuildable from source; each release states its SHA-256)
+dist/
+
+# Editor / OS noise
+.vs/
+*.user
+*.suo
+Thumbs.db

@@ -1,0 +1,37 @@
+{
+  "ordinaryUsageAllowed": true,
+  "rateLimits": {
+    "limitId": "codex", "limitName": null, "normalModelSlug": null,
+    "primary": { "usedPercent": 64.5, "windowDurationMins": 300, "resetsAt": 1793304080 },
+    "secondary": { "usedPercent": 30, "windowDurationMins": 10080, "resetsAt": 1793559200 },
+    "credits": { "hasCredits": true, "unlimited": false, "balance": "12.50" },
+    "individualLimit": { "limit": "100", "used": "25", "remainingPercent": 75, "resetsAt": 1795000000 },
+    "spendControlReached": false, "planType": "pro", "rateLimitReachedType": null
+  },
+  "rateLimitsByLimitId": {
+    "codex": {
+      "limitId": "codex", "limitName": null, "normalModelSlug": null,
+      "primary": { "usedPercent": 64.5, "windowDurationMins": 300, "resetsAt": 1793304080 },
+      "secondary": { "usedPercent": 30, "windowDurationMins": 10080, "resetsAt": 1793559200 },
+      "credits": { "hasCredits": true, "unlimited": false, "balance": "12.50" },
+      "individualLimit": { "limit": "100", "used": "25", "remainingPercent": 75, "resetsAt": 1795000000 },
+      "spendControlReached": false, "planType": "pro", "rateLimitReachedType": null
+    },
+    "gpt-5.5-pro": {
+      "limitId": "gpt-5.5-pro", "limitName": null, "normalModelSlug": "gpt-5.5-pro",
+      "primary": { "usedPercent": 12, "windowDurationMins": 10080, "resetsAt": 1793600000 },
+      "secondary": null,
+      "credits": null, "individualLimit": null, "spendControlReached": null, "planType": "pro", "rateLimitReachedType": null
+    }
+  },
+  "rateLimitResetCredits": {
+    "availableCount": 2,
+    "credits": [
+      { "id": "rc-fixture-1", "resetType": "codexRateLimits", "status": "available", "grantedAt": 1792000000, "expiresAt": 1794000000, "title": "Fixture reset title", "description": "Fixture reset description" },
+      { "id": "rc-fixture-2", "resetType": "codexRateLimits", "status": "redeemed", "grantedAt": 1791000000, "expiresAt": 1793400000, "title": null, "description": null },
+      { "id": "rc-fixture-3", "resetType": "codexRateLimits", "status": "available", "grantedAt": 1792000000, "expiresAt": 1796000000, "title": null, "description": null }
+    ]
+  },
+  "accountId": "acct-FIXTURE-SECRET",
+  "rateLimitUpsell": { "banner_text": "Fixture upsell banner", "cta_url": "https://example.invalid/upsell" }
+}
