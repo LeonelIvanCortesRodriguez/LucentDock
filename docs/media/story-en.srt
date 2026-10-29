@@ -1,0 +1,28 @@
+1
+00:00:00,800 --> 00:00:06,559
+This is LucentDock: a smart dock for Windows, built and verified in public.
+
+2
+00:00:09,000 --> 00:00:19,050
+Your taskbar shows your apps. It doesn't show what needs you now: the meeting in ten minutes, the battery dying, the limits you set for yourself.
+
+3
+00:00:26,000 --> 00:00:36,600
+When a meeting reaches ten minutes away, the dock rearranges itself: the calendar comes forward, distractions step aside, and one click puts everything back.
+
+4
+00:00:48,000 --> 00:00:56,110
+Three styles, including liquid glass, where the dock's material is your own wallpaper, bent at the rim by a lens.
+
+5
+00:01:06,000 --> 00:01:17,080
+Every release passes six hundred eighty two automated tests, builds reproducibly byte for byte, and crosses an attended gate at five display scales before anyone installs it.
+
+6
+00:01:28,000 --> 00:01:38,180
+It is built by Leonel Cortes, coordinating AI systems: one implements, another audits blind, and only Leonel can run the final gate.
+
+7
+00:01:46,000 --> 00:01:55,730
+LucentDock. Download it, verify its hash yourself, and undo anything it ever does. The whole story is in the open.
+

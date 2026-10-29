@@ -1,0 +1,28 @@
+1
+00:00:00,800 --> 00:00:06,990
+Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.
+
+2
+00:00:09,000 --> 00:00:20,470
+Tu barra de tareas muestra tus aplicaciones. No muestra lo que te necesita ahora: la reunión que viene, la batería que se agota, los límites que tú mismo pusiste.
+
+3
+00:00:26,000 --> 00:00:36,710
+Cuando una reunión está por empezar, la barra se reorganiza sola: el calendario pasa al frente, las distracciones se apartan, y un solo toque lo devuelve todo.
+
+4
+00:00:48,000 --> 00:00:56,990
+Tres estilos, incluido el cristal líquido: el material de la barra es tu propio fondo de pantalla, curvado en el borde como por una lente.
+
+5
+00:01:06,000 --> 00:01:17,360
+Cada versión pasa seiscientas ochenta y dos pruebas automáticas, se compila igual byte a byte, y cruza una compuerta presencial a cinco escalas de pantalla antes de instalarse.
+
+6
+00:01:28,000 --> 00:01:38,670
+Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.
+
+7
+00:01:46,000 --> 00:01:54,480
+Descárgala, verifica su integridad tú mismo, y revierte cualquier cosa que haga. Toda la historia está a la vista.
+

@@ -1,0 +1,32 @@
+{
+  "lines": {
+    "title": {
+      "start": 0.8,
+      "show": "LEONEL CORTES · LUCENTDOCK"
+    },
+    "problem": {
+      "start": 9.0,
+      "show": "Tu barra muestra aplicaciones - no lo que te necesita"
+    },
+    "react": {
+      "start": 26.0,
+      "show": "Cuando una reunión se acerca, la barra se reorganiza sola"
+    },
+    "styles": {
+      "start": 48.0,
+      "show": "Tres estilos - cristal hecho de tu fondo de pantalla"
+    },
+    "proof": {
+      "start": 66.0,
+      "show": "682 pruebas · compilación reproducible · compuertas presenciales"
+    },
+    "role": {
+      "start": 88.0,
+      "show": "Creado por Leonel Cortes dirigiendo sistemas de IA"
+    },
+    "result": {
+      "start": 106.0,
+      "show": "LucentDock - descarga, verifica, revierte lo que sea"
+    }
+  }
+}
