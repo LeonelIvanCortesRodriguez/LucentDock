@@ -2,12 +2,12 @@
   "lang": "en",
   "voice": "Microsoft Zira Desktop (Windows SAPI), rate 0, on the build PC",
   "lines": [
-    { "id": "title",   "start": 0,   "text": "This is LucentDock: a smart dock for Windows, built and verified in public.", "show": "LEONEL CORTES · LUCENTDOCK" },
+    { "id": "title",   "start": 0,   "text": "This is LucentDock: a smart dock for Windows, built and verified in public.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
     { "id": "problem", "start": 9,   "text": "Your taskbar shows your apps. It doesn't show what needs you now: the meeting in ten minutes, the battery dying, the limits you set for yourself.", "show": "Your taskbar shows apps - not what needs you" },
     { "id": "react",   "start": 26,  "text": "When a meeting reaches ten minutes away, the dock rearranges itself: the calendar comes forward, distractions step aside, and one click puts everything back.", "show": "When a meeting nears, the dock rearranges itself" },
     { "id": "styles",  "start": 48,  "text": "Three styles, including liquid glass, where the dock's material is your own wallpaper, bent at the rim by a lens.", "show": "Three styles - glass made from your wallpaper" },
     { "id": "proof",   "start": 66,  "text": "Every release passes six hundred eighty two automated tests, builds reproducibly byte for byte, and crosses an attended gate at five display scales before anyone installs it.", "show": "682 tests · reproducible builds · attended gates" },
-    { "id": "role",    "start": 88,  "text": "It is built by Leonel Cortes, coordinating AI systems: one implements, another audits blind, and only Leonel can run the final gate.", "show": "Built by Leonel Cortes, coordinating AI systems" },
+    { "id": "role",    "start": 88,  "text": "It is built by Leonel Cortés, coordinating AI systems: one implements, another audits blind, and only Leonel can run the final gate.", "show": "Built by Leonel Cortés, coordinating AI systems" },
     { "id": "result",  "start": 106, "text": "LucentDock. Download it, verify its hash yourself, and undo anything it ever does. The whole story is in the open.", "show": "LucentDock - download, verify, undo anything" }
   ]
 }

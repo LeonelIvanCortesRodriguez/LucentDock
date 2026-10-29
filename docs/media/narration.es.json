@@ -3,12 +3,12 @@
   "voice": "Microsoft Sabina Desktop (Windows SAPI, es-MX), velocidad 0, en la PC de compilación",
   "note": "La narración no pronuncia nombres en inglés; los nombres aparecen solo en pantalla.",
   "lines": [
-    { "id": "title",   "start": 0,   "text": "Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.", "show": "LEONEL CORTES · LUCENTDOCK" },
+    { "id": "title",   "start": 0,   "text": "Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
     { "id": "problem", "start": 9,   "text": "Tu barra de tareas muestra tus aplicaciones. No muestra lo que te necesita ahora: la reunión que viene, la batería que se agota, los límites que tú mismo pusiste.", "show": "Tu barra muestra aplicaciones - no lo que te necesita" },
     { "id": "react",   "start": 26,  "text": "Cuando una reunión está por empezar, la barra se reorganiza sola: el calendario pasa al frente, las distracciones se apartan, y un solo toque lo devuelve todo.", "show": "Cuando una reunión se acerca, la barra se reorganiza sola" },
     { "id": "styles",  "start": 48,  "text": "Tres estilos, incluido el cristal líquido: el material de la barra es tu propio fondo de pantalla, curvado en el borde como por una lente.", "show": "Tres estilos - cristal hecho de tu fondo de pantalla" },
     { "id": "proof",   "start": 66,  "text": "Cada versión pasa seiscientas ochenta y dos pruebas automáticas, se compila igual byte a byte, y cruza una compuerta presencial a cinco escalas de pantalla antes de instalarse.", "show": "682 pruebas · compilación reproducible · compuertas presenciales" },
-    { "id": "role",    "start": 88,  "text": "Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.", "show": "Creado por Leonel Cortes dirigiendo sistemas de IA" },
+    { "id": "role",    "start": 88,  "text": "Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.", "show": "Creado por Leonel Cortés dirigiendo sistemas de IA" },
     { "id": "result",  "start": 106, "text": "Descárgala, verifica su integridad tú mismo, y revierte cualquier cosa que haga. Toda la historia está a la vista.", "show": "LucentDock - descarga, verifica, revierte lo que sea" }
   ]
 }
