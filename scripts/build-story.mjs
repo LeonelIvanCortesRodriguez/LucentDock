@@ -38,8 +38,9 @@ function copy(source, name = path.basename(source)) {
 }
 
 function prepareAssets() {
-  ff(["-i", path.join(capture, "frames", "frame-0100.png"), "-vf", "crop=2000:170:850:0,scale=1760:500:flags=lanczos", "-frames:v", "1", path.join(assets, "before.png")]);
-  ff(["-i", path.join(capture, "frames", "frame-0820.png"), "-vf", "crop=2000:170:850:0,scale=1760:500:flags=lanczos", "-frames:v", "1", path.join(assets, "after.png")]);
+  const dockDetail = "crop=1190:170:1100:0,scale=1750:250:flags=lanczos,pad=1760:500:5:125:color=0xd9e5f6";
+  ff(["-i", path.join(capture, "frames", "frame-0100.png"), "-vf", dockDetail, "-frames:v", "1", path.join(assets, "before.png")]);
+  ff(["-i", path.join(capture, "frames", "frame-0820.png"), "-vf", dockDetail, "-frames:v", "1", path.join(assets, "after.png")]);
   for (const name of [
     "command-palette.png", "flyout-calendar-glass.png", "settings-automations.png",
     "dock-glass.png", "settings-taskbar.png", "settings-privacy.png",
@@ -50,12 +51,12 @@ function prepareAssets() {
 
   ff([
     "-framerate", "60", "-start_number", "300", "-i", path.join(capture, "frames", "frame-%04d.png"),
-    "-frames:v", "121", "-vf", "crop=2000:170:850:0,scale=1920:500:flags=lanczos,fps=24",
+    "-frames:v", "121", "-vf", `${dockDetail},fps=24`,
     "-an", "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", path.join(assets, "transition.mp4")
   ]);
   ff([
     "-framerate", "120", "-start_number", "50", "-i", path.join(capture, "frames-undo", "frame-%04d.png"),
-    "-frames:v", "1101", "-vf", "crop=2000:170:850:0,scale=1920:500:flags=lanczos,fps=24",
+    "-frames:v", "1101", "-vf", `${dockDetail},fps=24`,
     "-an", "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", path.join(assets, "undo.mp4")
   ]);
 }

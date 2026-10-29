@@ -38,7 +38,9 @@ into the meeting, the dock quietly puts everything back.
 - **Automations (9)**: meetings, low battery, night layout, focus, screen-time interventions; all as undoable overlays.
 - **Styles (3)**: Glass, Liquid glass (the wallpaper itself, bent at the rim by a lens shader), Dark.
 - **Safety**: the Windows taskbar is restored first and hidden only after the dock is verifiably ready; everything fails visible.
-- **Privacy**: no account, no telemetry; one optional weather request; everything else stays on your PC.
+- **Privacy**: no account or telemetry. The [network inventory](PRIVACY.md) separates the default
+  direct weather traffic, including geocoding when you search for a city; opt-in web updates; and
+  traffic that locally installed provider clients may make to their own services.
 
 The complete list, with every detail, is in [docs/FEATURES.md](docs/FEATURES.md).
 
@@ -63,9 +65,8 @@ The full gallery (every widget flyout in every style, menus, and settings pages)
 This repo is not a demo; it is the source of a build that passed a release gate before anyone was
 allowed to install it:
 
-- **682 automated tests**, run on both the development tree and this exact public tree.
-- **Reproducible builds**: three independent publishes from a clean clone of this source produce
-  the released executable byte for byte.
+- **682/682 product tests** passed.
+- **Reproducible local builds** are part of release verification.
 - **Attended verification**: a human-operated gate run at five display scales (100 to 250%), keyboard
   and screen-reader checks included, recorded with per-artifact hashes.
 - **Independent audits**: two separate AI auditors reviewed a release-blocking defect blind, and
@@ -76,13 +77,9 @@ attended owner gates at five display scales → independent audits → signoff �
 
 ## Download and install
 
-Grab the latest release from **[Releases](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)**:
-the executable, its SHA-256, and `update.json`. Run it once and it offers nothing silent: installs
-are per-user (`--install`), no admin rights, and the Windows taskbar always survives.
-
-Releases are an **unsigned preview**: Windows SmartScreen will warn the first time ("More info →
-Run anyway"), and the SHA-256 beside the download lets you verify the file yourself;
-[SECURITY.md](SECURITY.md) explains exactly what that does and does not prove.
+The first release is being prepared, so **[Releases](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)**
+is currently empty. For now, use the commands below to build and verify LucentDock from source.
+Download and asset-verification instructions will return here when a release exists.
 
 ## Leonel's role
 
@@ -96,8 +93,9 @@ issues only and never the builder's hypotheses.
 ## The story, as a video
 
 A ≈2-minute telling of why LucentDock exists and how it is verified:
-**[English](docs/media/story-en.mp4)** · **[Español](docs/media/story-es.mp4)**: captions included,
-poster from the title card.
+**[English MP4](docs/media/story-en.mp4)** ([SRT captions](docs/media/story-en.srt)) ·
+**[Español MP4](docs/media/story-es.mp4)** ([subtítulos SRT](docs/media/story-es.srt)) ·
+**[Poster](docs/media/poster.png)**.
 
 ## Build and verify it yourself
 

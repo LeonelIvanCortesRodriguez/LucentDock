@@ -15,10 +15,11 @@ fs.mkdirSync(work, { recursive: true });
 const run = (args) => execFileSync(ffmpeg, ["-hide_banner", "-loglevel", "error", "-y", ...args], { cwd: work, stdio: "inherit" });
 const frame = (name) => path.join(capture, "frames", name);
 const transition = path.join(work, "transition.mp4");
+const dockDetail = "crop=1190:170:1100:0,scale=1260:180:flags=lanczos,pad=1280:360:10:90:color=0xd9e5f6";
 
 run([
   "-framerate", "60", "-start_number", "300", "-i", path.join(capture, "frames", "frame-%04d.png"),
-  "-frames:v", "121", "-vf", "crop=2000:170:850:0,scale=1280:360:flags=lanczos,fps=20",
+  "-frames:v", "121", "-vf", `${dockDetail},fps=20`,
   "-an", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", transition
 ]);
 
@@ -44,9 +45,9 @@ run([
   "-i", transition,
   "-loop", "1", "-t", "2.65", "-i", frame("frame-0820.png"),
   "-filter_complex",
-  "[0:v]crop=2000:170:850:0,scale=1280:360:flags=lanczos,fps=20,trim=duration=2.4,setpts=PTS-STARTPTS[b];" +
+  `[0:v]${dockDetail},fps=20,trim=duration=2.4,setpts=PTS-STARTPTS[b];` +
     "[1:v]fps=20,setpts=PTS-STARTPTS[t];" +
-    "[2:v]crop=2000:170:850:0,scale=1280:360:flags=lanczos,fps=20,trim=duration=2.65,setpts=PTS-STARTPTS[a];" +
+    `[2:v]${dockDetail},fps=20,trim=duration=2.65,setpts=PTS-STARTPTS[a];` +
     "[b][t][a]concat=n=3:v=1:a=0,subtitles=captions.ass[v]",
   "-map", "[v]", "-an", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", heroMp4
 ]);

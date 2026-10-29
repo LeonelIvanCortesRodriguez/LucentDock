@@ -42,13 +42,13 @@
     .context-chip:nth-child(6) { right: 130px; bottom: 70px; }
 
     .dock-stage { position: absolute; left: 0; right: 0; top: 70px; height: 500px; border-radius: 42px; overflow: hidden; display: grid; place-items: center; background: linear-gradient(180deg, #d9e5f6, #b9cbe0); }
-    .dock-stage img, .dock-stage video { position: absolute; width: 1760px; height: 500px; object-fit: fill; }
+    .dock-stage img, .dock-stage video { position: absolute; width: 1760px; height: 500px; object-fit: contain; }
     #meeting-after { opacity: 0; }
     #meeting-transition { z-index: 4; }
     .meeting-caption { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 8; font-size: 27px; font-weight: 800; color: #0b1620; background: rgba(255,255,255,.84); padding: 13px 24px; border-radius: 999px; }
 
     .undo-frame { position: absolute; inset: 40px 0 20px; border-radius: 42px; overflow: hidden; background: #c7d5e7; }
-    .undo-frame video { width: 100%; height: 100%; object-fit: fill; }
+    .undo-frame video { width: 100%; height: 100%; object-fit: contain; }
     .undo-note { position: absolute; right: 36px; bottom: 30px; font-size: 26px; font-weight: 800; color: #0b1620; background: #79e7b6; padding: 14px 22px; border-radius: 14px; }
 
     .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; height: 100%; }
@@ -102,14 +102,14 @@
 
   <section id="scene-problem" class="scene"><div class="eyebrow">01 · the problem</div><div class="visual drift"><div class="problem-orbit"></div><div class="problem-core glass">Your taskbar<br>remembers apps</div><span class="context-chip pill">calendar</span><span class="context-chip pill">battery</span><span class="context-chip pill">limits</span><span class="context-chip pill">focus</span></div></section>
 
-  <section id="scene-meeting" class="scene"><div class="eyebrow">02 · meeting in ten minutes</div><div class="visual"><div class="dock-stage glass"><img id="meeting-before" src="assets/before.png"><video id="meeting-transition" src="assets/transition.mp4" muted playsinline data-start="__MEETING_VIDEO_START__" data-duration="__MEETING_VIDEO_DURATION__" data-track-index="2"></video><img id="meeting-after" src="assets/after.png"><div class="meeting-caption">real fixture capture · dock enlarged 2.6×</div></div></div></section>
+  <section id="scene-meeting" class="scene"><div class="eyebrow">02 · meeting in ten minutes</div><div class="visual"><div class="dock-stage glass"><img id="meeting-before" src="assets/before.png"><video id="meeting-transition" src="assets/transition.mp4" muted playsinline data-start="__MEETING_VIDEO_START__" data-duration="__MEETING_VIDEO_DURATION__" data-track-index="2"></video><img id="meeting-after" src="assets/after.png"><div class="meeting-caption">real fixture capture · dock uniformly enlarged 1.47×</div></div></div></section>
 
   <section id="scene-undo" class="scene"><div class="eyebrow">03 · the overlay reverses</div><div class="visual drift"><div class="undo-frame glass"><video id="undo-transition" src="assets/undo.mp4" muted playsinline data-start="__UNDO_VIDEO_START__" data-duration="__UNDO_VIDEO_DURATION__" data-track-index="2"></video><div class="undo-note">saved layout stays intact</div></div></div></section>
 
   <section id="scene-groups" class="scene"><div class="eyebrow">04 · six product groups</div><div class="visual"><div class="feature-grid">
-    <article class="feature glass"><img src="assets/command-palette.png"><b>Apps</b><small>pin · group · preview</small></article>
-    <article class="feature glass"><img src="assets/flyout-calendar-glass.png"><b>Widgets</b><small>14 useful modules</small></article>
-    <article class="feature glass"><img src="assets/settings-automations.png"><b>Automations</b><small>9 undoable overlays</small></article>
+    <article class="feature glass"><img src="assets/command-palette.png"><b data-i18n="apps">Apps</b><small>pin · group · preview</small></article>
+    <article class="feature glass"><img src="assets/flyout-calendar-glass.png"><b data-i18n="widgets">Widgets</b><small>14 useful modules</small></article>
+    <article class="feature glass"><img src="assets/settings-automations.png"><b data-i18n="automations">Automations</b><small>9 undoable overlays</small></article>
     <article class="feature glass"><img src="assets/dock-glass.png"><b>Styles</b><small>glass · liquid · dark</small></article>
     <article class="feature glass"><img src="assets/settings-taskbar.png"><b>Safety</b><small>fails visible</small></article>
     <article class="feature glass"><img src="assets/settings-privacy.png"><b>Privacy</b><small>no account · no telemetry</small></article>
@@ -130,12 +130,23 @@
 
   <section id="scene-role" class="scene"><div class="eyebrow">07 · Leonel's role</div><div class="visual"><div class="role-map"><div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div id="builder" class="role-card glass">Builder<small>implements</small></div><div id="auditor" class="role-card glass">Blind auditor<small>tests the result</small></div><div id="owner" class="role-card glass">Leonel Cortés<small>coordinates the systems</small></div><div id="gate" class="role-card glass">Final gate<small>owner only</small></div></div></div></section>
 
-  <section id="scene-result" class="scene"><div class="eyebrow">08 · download and verify</div><div class="visual drift"><div class="result-card glass"><h2>Build from source</h2><p>The first public release is being prepared. The repository already includes the product, the evidence, the verification steps, and the rule that every automation remains undoable.</p><div class="result-actions"><span class="pill">BUILD</span><span class="pill">VERIFY</span><span class="pill">UNDO</span></div><div class="hash"><i></i></div><div class="hash-label">SHA-256 · verified locally before install</div></div></div></section>
+  <section id="scene-result" class="scene"><div class="eyebrow">08 · download and verify</div><div class="visual drift"><div class="result-card glass"><h2 data-i18n="buildSource">Build from source</h2><p>The first public release is being prepared. The repository already includes the product, the evidence, the verification steps, and the rule that every automation remains undoable.</p><div class="result-actions"><span class="pill">BUILD</span><span class="pill">VERIFY</span><span class="pill">UNDO</span></div><div class="hash"><i></i></div><div class="hash-label">SHA-256 · verified locally before install</div></div></div></section>
 
   <div class="footer"><span>LucentDock · 1.3.2</span><span>built and verified in public</span></div>
 </div>
 <script>
   const STORY = /*__STORY__*/null;
+  const localized = {
+    es: {
+      apps: "Aplicaciones",
+      widgets: "Módulos",
+      automations: "Automatizaciones",
+      buildSource: "Compila desde el código fuente"
+    }
+  };
+  for (const node of document.querySelectorAll("[data-i18n]")) {
+    node.textContent = localized[STORY.lang]?.[node.dataset.i18n] ?? node.textContent;
+  }
   const tl = gsap.timeline({ paused: true });
   tl.to({}, { duration: STORY.total }, 0);
   gsap.set(".scene", { autoAlpha: 0 });

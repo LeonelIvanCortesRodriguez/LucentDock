@@ -1,5 +1,5 @@
 <picture>
-  <img src="docs/media/hero.gif" width="1280" alt="La barra de LucentDock al pie del escritorio: una reunión llega a diez minutos de distancia y el dock se reorganiza solo - los widgets de música, clima y tiempo de pantalla se apartan, el calendario pasa al frente con la reunión visible y la barra queda en su disposición de reunión, más tranquila.">
+  <img src="docs/media/hero.gif" width="1280" alt="La barra de LucentDock al pie del escritorio: una reunión llega a diez minutos de distancia y el dock se reorganiza solo; los widgets de música, clima y tiempo de pantalla se apartan, el calendario pasa al frente con la reunión visible y la barra queda en su disposición de reunión, más tranquila.">
 </picture>
 
 # LucentDock
@@ -38,7 +38,10 @@ Quince minutos después de empezar la reunión, el dock devuelve todo a su lugar
 - **Automatizaciones (9)**: reuniones, batería baja, disposición nocturna, concentración, pausas de pantalla; todas como capas reversibles.
 - **Estilos (3)**: Glass, Liquid glass (el propio fondo de pantalla, curvado en el borde por una lente) y Oscuro.
 - **Seguridad**: la barra de Windows se restaura primero y se oculta solo cuando el dock está verificado y listo; todo falla de forma visible.
-- **Privacidad**: sin cuenta, sin telemetría; una sola consulta opcional del clima; todo lo demás queda en tu PC.
+- **Privacidad**: sin cuenta ni telemetría. El [inventario de red](PRIVACY.md) separa el tráfico
+  directo del clima, activo de forma predeterminada e incluida la geocodificación cuando buscas una
+  ciudad; las actualizaciones web opcionales; y el tráfico que los clientes locales de proveedores
+  pueden enviar a sus propios servicios.
 
 La lista completa, con todo el detalle, está en [docs/FEATURES.md](docs/FEATURES.md).
 
@@ -64,9 +67,8 @@ La galería completa (cada panel en cada estilo, menús y páginas de ajustes) e
 Este repositorio no es una demostración; es la fuente de una compilación que pasó una compuerta de
 publicación antes de que nadie pudiera instalarla:
 
-- **682 pruebas automatizadas**, ejecutadas sobre el árbol de desarrollo y sobre este árbol público exacto.
-- **Compilaciones reproducibles**: tres publicaciones independientes desde un clon limpio de esta
-  fuente producen el ejecutable publicado byte a byte.
+- **682/682 pruebas del producto** aprobadas.
+- **Compilaciones locales reproducibles** como parte de la verificación de publicación.
 - **Verificación presencial**: una compuerta operada por una persona a cinco escalas de pantalla
   (100 a 250 %), con pruebas de teclado y lector de pantalla, registrada con el hash de cada evidencia.
 - **Auditorías independientes**: dos auditores de IA distintos revisaron a ciegas un defecto que
@@ -78,13 +80,9 @@ cinco escalas → auditorías independientes → visto bueno → instalación`.
 
 ## Descargar e instalar
 
-La versión más reciente está en **[Releases](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)**:
-el ejecutable, su SHA-256 y `update.json`. Nada es silencioso: la instalación es por usuario
-(`--install`), sin derechos de administrador, y la barra de Windows siempre sobrevive.
-
-Las versiones son una **vista previa sin firmar**: SmartScreen avisará la primera vez ("Más
-información → Ejecutar de todas formas"), y el SHA-256 junto a la descarga te permite verificar el
-archivo tú mismo; [SECURITY.md](SECURITY.md) explica qué prueba eso y qué no.
+La primera versión se está preparando, así que **[Releases](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)**
+está vacío por ahora. Usa los comandos de abajo para compilar y verificar LucentDock desde el código
+fuente. Las instrucciones de descarga y verificación de archivos volverán cuando exista una versión.
 
 ## El papel de Leonel
 
@@ -98,8 +96,9 @@ solo con los problemas y nunca con las hipótesis del constructor.
 ## La historia, en video
 
 Un relato de ≈2 minutos de por qué existe LucentDock y cómo se verifica:
-**[Español](docs/media/story-es.mp4)** · **[English](docs/media/story-en.mp4)**: con subtítulos y
-póster tomado de la carátula.
+**[Español MP4](docs/media/story-es.mp4)** ([subtítulos SRT](docs/media/story-es.srt)) ·
+**[English MP4](docs/media/story-en.mp4)** ([SRT captions](docs/media/story-en.srt)) ·
+**[Póster](docs/media/poster.png)**.
 
 ## Compílalo y verifícalo tú mismo
 
