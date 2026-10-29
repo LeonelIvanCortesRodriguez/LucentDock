@@ -7,7 +7,7 @@ param([switch]$Disconnect, [string]$Strata, [string]$Claude)
 #   .\tools\claude-terminal.ps1 -Disconnect   remove Strata's status line (puts your settings file back)
 #
 # Nothing is downloaded: it uses a Claude Code that is already installed (on PATH, or an IDE extension's copy).
-# Connecting changes one key, statusLine, in ~/.claude/settings.json, after a backup (see Settings > AI usage).
+# Connecting changes one key, statusLine, in Claude Code's user settings.json, after a backup (see Settings > AI usage).
 $ErrorActionPreference = "Stop"
 $repo = (Resolve-Path "$PSScriptRoot\..").Path
 

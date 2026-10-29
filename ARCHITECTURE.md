@@ -1,4 +1,4 @@
-# Strata 1.3 architecture
+# LucentDock 1.3.2 architecture (internal codename Strata)
 
 ## Lifecycle
 

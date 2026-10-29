@@ -46,6 +46,6 @@ Weather is Strata's only direct network request that is on by default. The defau
 - fixture volume, weather, system-load, battery, and network values;
 - no live window enumeration, screen-time tracking, audio device, media session, or weather request.
 
-Any guarded live access throws and makes the preview command fail. After rendering, `PreviewPrivacy` scans every artifact for `C:\Users\`, the current username, user-profile paths, the normal Strata root, and any supplied live-data markers. The checked-in result is [`previews/privacy-scan.txt`](previews/privacy-scan.txt).
+Any guarded live access throws and makes the preview command fail. After rendering, `PreviewPrivacy` scans every artifact for the Windows user-profile path prefix, the current username, user-profile paths, the normal Strata root, and any supplied live-data markers. The checked-in result is [`previews/privacy-scan.txt`](previews/privacy-scan.txt).
 
 A public release is published as a sanitized repository built from an explicit list of public files, never from the development history. The privacy scan runs on that exact exported tree before anything is published.
