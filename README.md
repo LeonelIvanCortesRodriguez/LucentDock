@@ -2,9 +2,27 @@
 
 **LucentDock** is this project's public name; the code, evidence and process documents keep its internal codename **Strata**.
 
+**[Release process records](docs/process/)** · [Architecture](ARCHITECTURE.md) · [Privacy](PRIVACY.md) · [Preview gallery](previews/)
+
 > A smart dock for Windows: your apps, your day and your limits in one bar, which rearranges itself when something needs you.
 
 Strata is a native Windows 10/11 dock built with C# and WPF. It combines pinned and running apps, 14 live widgets, and 9 signal-driven automations. Automation changes are overlays: they can promote, hide, or emphasize widgets and request a theme without rewriting the user's saved layout.
+
+## What it looks like
+
+Every preview below is rendered deterministically from sanitized fixtures and privacy-scanned before commit; no live user data appears in any image ([previews/privacy-scan.txt](previews/privacy-scan.txt)).
+
+The three dock styles:
+
+![Glass, the default style: a dark acrylic bar with pinned apps on the left and fourteen fixture widgets on the right](previews/dock-glass.png)
+![Liquid glass: the translucent style where the softened wallpaper itself is the material behind apps and widgets](previews/dock-clear.png)
+![Dark: the near-opaque dark style of the same dock](previews/dock-dark.png)
+
+| Media flyout | AI usage flyout | Command palette |
+| --- | --- | --- |
+| ![The media card: album cover as blurred background, waveform progress bar, round playback controls, all in the cover's colour](previews/flyout-media-glass.png) | ![The AI usage flyout: Claude and Codex plan limits with used percentages, reset countdowns and the pace forecast](previews/flyout-quota-glass.png) | ![The keyboard-first command palette over fixture apps, windows, settings and actions](previews/command-palette.png) |
+
+The full gallery — every widget flyout in every style, menus, and settings pages — is in [previews/](previews/).
 
 ## What is included
 
@@ -90,6 +108,8 @@ Normal data lives under `%APPDATA%\Strata`, or `STRATA_DATA_ROOT` when explicitl
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) — lifecycle, signals, automations, layout overlays, native integration, and failure boundaries.
 - [`tests/`](tests/) — the automated test suite; [`previews/`](previews/) — fixture-only screenshots of every style, flyout and Settings page.
+
+How a release ships: `feature work -> 682 automated tests -> reproducible-build verification -> attended owner gates at five display scales -> independent audits -> signoff -> install`.
 
 Each release candidate is also verified live (UI Automation, display scaling, keyboard, Explorer behavior and a 30-minute soak) and independently audited. For the 1.3.2 release, the audit briefs, independent audits, closeout and final acceptance report are included, privacy-scrubbed, in [docs/process/](docs/process/).
 
