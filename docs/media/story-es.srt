@@ -1,28 +1,51 @@
 1
-00:00:00,800 --> 00:00:06,990
+00:00:00,800 --> 00:00:06,925
 Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.
 
 2
-00:00:09,000 --> 00:00:20,470
-Tu barra de tareas muestra tus aplicaciones. No muestra lo que te necesita ahora: la reunión que viene, la batería que se agota, los límites que tú mismo pusiste.
+00:00:07,275 --> 00:00:16,919
+Una barra normal recuerda lo que fijaste. No muestra qué necesita tu atención ahora: la próxima reunión, una batería agotada o un límite que elegiste.
 
 3
-00:00:26,000 --> 00:00:36,710
-Cuando una reunión está por empezar, la barra se reorganiza sola: el calendario pasa al frente, las distracciones se apartan, y un solo toque lo devuelve todo.
+00:00:16,919 --> 00:00:24,191
+El contexto importante queda repartido entre calendarios, menús, avisos y ventanas que tienes que buscar.
 
 4
-00:00:48,000 --> 00:00:56,990
-Tres estilos, incluido el cristal líquido: el material de la barra es tu propio fondo de pantalla, curvado en el borde como por una lente.
+00:00:24,541 --> 00:00:33,537
+Diez minutos antes de la revisión de diseño, la barra cotidiana aún muestra música, clima, tiempo de pantalla y las aplicaciones habituales.
 
 5
-00:01:06,000 --> 00:01:17,360
-Cada versión pasa seiscientas ochenta y dos pruebas automáticas, se compila igual byte a byte, y cruza una compuerta presencial a cinco escalas de pantalla antes de instalarse.
+00:00:33,537 --> 00:00:42,559
+Entonces se reorganiza sola. El calendario pasa al frente, las distracciones se apartan y la barra se acomoda sin cubrir el trabajo.
 
 6
-00:01:28,000 --> 00:01:38,670
-Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.
+00:00:42,909 --> 00:00:52,463
+El cambio es una capa temporal, nunca una modificación. La actividad explica la regla y el motivo, mientras una acción restaura la barra cotidiana.
 
 7
-00:01:46,000 --> 00:01:54,480
-Descárgala, verifica su integridad tú mismo, y revierte cualquier cosa que haga. Toda la historia está a la vista.
+00:00:52,813 --> 00:01:01,392
+Seis ideas cubren el producto: aplicaciones para ordenar, catorce módulos útiles y nueve automatizaciones que responden a tu día.
 
+8
+00:01:01,392 --> 00:01:10,940
+Tres estilos se unen a la seguridad visible y la privacidad inicial: sin cuenta, sin telemetría y con datos ficticios en las muestras públicas.
+
+9
+00:01:11,290 --> 00:01:20,441
+Elige cristal, oscuro o cristal líquido, donde tu propio fondo se curva en el borde mediante una lente y no con un desenfoque genérico.
+
+10
+00:01:20,791 --> 00:01:29,285
+Seiscientas ochenta y dos pruebas automáticas y una verificación reproducible permiten comparar cada archivo de forma exacta.
+
+11
+00:01:29,285 --> 00:01:37,457
+Compuertas presenciales a cinco escalas, auditorías independientes y una aprobación expresa ocurren antes de instalar.
+
+12
+00:01:37,807 --> 00:01:49,120
+Leonel Cortés dirige los sistemas de inteligencia artificial. Uno implementa, otro audita a ciegas, los hallazgos vuelven al constructor y solo Leonel opera la compuerta final.
+
+13
+00:01:49,470 --> 00:02:00,799
+La primera versión se está preparando. Hasta entonces, compila desde el código fuente, revisa las pruebas, verifica el archivo y recuerda que cada cambio se puede revertir.

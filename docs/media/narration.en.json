@@ -1,13 +1,20 @@
 {
-  "lang": "en",
-  "voice": "Microsoft Zira Desktop (Windows SAPI), rate 0, on the build PC",
+  "lang": "en-us",
+  "voice": "af_heart",
+  "speed": 1.0,
   "lines": [
-    { "id": "title",   "start": 0,   "text": "This is LucentDock: a smart dock for Windows, built and verified in public.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
-    { "id": "problem", "start": 9,   "text": "Your taskbar shows your apps. It doesn't show what needs you now: the meeting in ten minutes, the battery dying, the limits you set for yourself.", "show": "Your taskbar shows apps - not what needs you" },
-    { "id": "react",   "start": 26,  "text": "When a meeting reaches ten minutes away, the dock rearranges itself: the calendar comes forward, distractions step aside, and one click puts everything back.", "show": "When a meeting nears, the dock rearranges itself" },
-    { "id": "styles",  "start": 48,  "text": "Three styles, including liquid glass, where the dock's material is your own wallpaper, bent at the rim by a lens.", "show": "Three styles - glass made from your wallpaper" },
-    { "id": "proof",   "start": 66,  "text": "Every release passes six hundred eighty two automated tests, builds reproducibly byte for byte, and crosses an attended gate at five display scales before anyone installs it.", "show": "682 tests · reproducible builds · attended gates" },
-    { "id": "role",    "start": 88,  "text": "It is built by Leonel Cortés, coordinating AI systems: one implements, another audits blind, and only Leonel can run the final gate.", "show": "Built by Leonel Cortés, coordinating AI systems" },
-    { "id": "result",  "start": 106, "text": "LucentDock. Download it, verify its hash yourself, and undo anything it ever does. The whole story is in the open.", "show": "LucentDock - download, verify, undo anything" }
+    { "id": "title", "scene": "title", "text": "This is LucentDock, a smart dock for Windows, built and verified in public.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
+    { "id": "problem_now", "scene": "problem", "text": "A normal taskbar remembers what you pinned. It misses what needs you now: the next meeting, a dying battery, or a limit you chose.", "show": "A TASKBAR REMEMBERS APPS" },
+    { "id": "problem_context", "scene": "problem", "text": "Important context stays scattered across calendars, menus, notifications, and windows you must hunt down.", "show": "CONTEXT STAYS SCATTERED" },
+    { "id": "meeting_before", "scene": "meeting", "text": "Ten minutes before design review, the everyday dock still carries media, weather, screen time, and the usual apps.", "show": "10 MINUTES TO A MEETING" },
+    { "id": "meeting_change", "scene": "meeting", "text": "Then it rearranges itself. The calendar moves forward, leisure widgets step away, and the bar settles without covering your work.", "show": "CALENDAR FORWARD · LEISURE AWAY" },
+    { "id": "undo", "scene": "undo", "text": "The change is an overlay, never a rewrite. Activity explains the rule and its reason, while one action restores the everyday dock.", "show": "EVERY CHANGE CAN BE UNDONE" },
+    { "id": "groups_one", "scene": "groups", "text": "Six ideas cover the product: apps to arrange, fourteen useful widgets, and nine automations that respond to your day.", "show": "APPS · WIDGETS · AUTOMATIONS" },
+    { "id": "groups_two", "scene": "groups", "text": "Three styles join safety that fails visible and privacy by default: no account, no telemetry, and fixture data in public previews.", "show": "STYLES · SAFETY · PRIVACY" },
+    { "id": "styles", "scene": "styles", "text": "Choose glass, dark, or liquid glass, where your own wallpaper bends at the rim through a lens instead of a generic blur.", "show": "GLASS · LIQUID GLASS · DARK" },
+    { "id": "proof_tests", "scene": "proof", "text": "Six hundred eighty two automated tests and reproducible build verification make each release artifact comparable byte for byte.", "show": "682 AUTOMATED TESTS" },
+    { "id": "proof_gates", "scene": "proof", "text": "Attended owner gates at five display scales, independent audits, and explicit signoff come before installation.", "show": "REPRODUCIBLE · GATED · AUDITED" },
+    { "id": "role", "scene": "role", "text": "Leonel Cortés coordinates the artificial intelligence systems. One implements, another audits blind, findings return to the builder, and only Leonel runs the final gate.", "show": "BUILT BY LEONEL CORTÉS" },
+    { "id": "result", "scene": "result", "text": "The first release is being prepared. Until then, build from source, inspect the evidence, verify the artifact hash, and remember that every dock change can be undone.", "show": "BUILD · VERIFY · UNDO" }
   ]
 }

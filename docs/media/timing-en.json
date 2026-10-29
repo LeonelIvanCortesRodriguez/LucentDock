@@ -1,32 +1,135 @@
 {
+  "lang": "en",
+  "total": 121.189,
   "lines": {
     "title": {
+      "scene": "title",
       "start": 0.8,
-      "show": "LEONEL CORTÉS · LUCENTDOCK"
+      "end": 5.642,
+      "show": "LEONEL CORTÉS · LUCENTDOCK",
+      "text": "This is LucentDock, a smart dock for Windows, built and verified in public."
     },
-    "problem": {
-      "start": 9.0,
-      "show": "Your taskbar shows apps - not what needs you"
+    "problem_now": {
+      "scene": "problem",
+      "start": 6.892,
+      "end": 15.061,
+      "show": "A TASKBAR REMEMBERS APPS",
+      "text": "A normal taskbar remembers what you pinned. It misses what needs you now: the next meeting, a dying battery, or a limit you chose."
     },
-    "react": {
-      "start": 26.0,
-      "show": "When a meeting nears, the dock rearranges itself"
+    "problem_context": {
+      "scene": "problem",
+      "start": 15.611,
+      "end": 22.313,
+      "show": "CONTEXT STAYS SCATTERED",
+      "text": "Important context stays scattered across calendars, menus, notifications, and windows you must hunt down."
+    },
+    "meeting_before": {
+      "scene": "meeting",
+      "start": 23.563,
+      "end": 30.441,
+      "show": "10 MINUTES TO A MEETING",
+      "text": "Ten minutes before design review, the everyday dock still carries media, weather, screen time, and the usual apps."
+    },
+    "meeting_change": {
+      "scene": "meeting",
+      "start": 30.991,
+      "end": 38.868,
+      "show": "CALENDAR FORWARD · LEISURE AWAY",
+      "text": "Then it rearranges itself. The calendar moves forward, leisure widgets step away, and the bar settles without covering your work."
+    },
+    "undo": {
+      "scene": "undo",
+      "start": 40.118,
+      "end": 48.746,
+      "show": "EVERY CHANGE CAN BE UNDONE",
+      "text": "The change is an overlay, never a rewrite. Activity explains the rule and its reason, while one action restores the everyday dock."
+    },
+    "groups_one": {
+      "scene": "groups",
+      "start": 49.996,
+      "end": 57.729,
+      "show": "APPS · WIDGETS · AUTOMATIONS",
+      "text": "Six ideas cover the product: apps to arrange, fourteen useful widgets, and nine automations that respond to your day."
+    },
+    "groups_two": {
+      "scene": "groups",
+      "start": 58.279,
+      "end": 67.354,
+      "show": "STYLES · SAFETY · PRIVACY",
+      "text": "Three styles join safety that fails visible and privacy by default: no account, no telemetry, and fixture data in public previews."
     },
     "styles": {
-      "start": 48.0,
-      "show": "Three styles - glass made from your wallpaper"
+      "scene": "styles",
+      "start": 68.604,
+      "end": 75.959,
+      "show": "GLASS · LIQUID GLASS · DARK",
+      "text": "Choose glass, dark, or liquid glass, where your own wallpaper bends at the rim through a lens instead of a generic blur."
     },
-    "proof": {
-      "start": 66.0,
-      "show": "682 tests · reproducible builds · attended gates"
+    "proof_tests": {
+      "scene": "proof",
+      "start": 77.209,
+      "end": 85.539,
+      "show": "682 AUTOMATED TESTS",
+      "text": "Six hundred eighty two automated tests and reproducible build verification make each release artifact comparable byte for byte."
+    },
+    "proof_gates": {
+      "scene": "proof",
+      "start": 86.089,
+      "end": 93.261,
+      "show": "REPRODUCIBLE · GATED · AUDITED",
+      "text": "Attended owner gates at five display scales, independent audits, and explicit signoff come before installation."
     },
     "role": {
-      "start": 88.0,
-      "show": "Built by Leonel Cortés, coordinating AI systems"
+      "scene": "role",
+      "start": 94.511,
+      "end": 105.871,
+      "show": "BUILT BY LEONEL CORTÉS",
+      "text": "Leonel Cortés coordinates the artificial intelligence systems. One implements, another audits blind, findings return to the builder, and only Leonel runs the final gate."
     },
     "result": {
-      "start": 106.0,
-      "show": "LucentDock - download, verify, undo anything"
+      "scene": "result",
+      "start": 107.121,
+      "end": 117.989,
+      "show": "BUILD · VERIFY · UNDO",
+      "text": "The first release is being prepared. Until then, build from source, inspect the evidence, verify the artifact hash, and remember that every dock change can be undone."
+    }
+  },
+  "scenes": {
+    "title": {
+      "start": 0,
+      "end": 6.192
+    },
+    "problem": {
+      "start": 6.192,
+      "end": 22.863
+    },
+    "meeting": {
+      "start": 22.863,
+      "end": 39.418
+    },
+    "undo": {
+      "start": 39.418,
+      "end": 49.296
+    },
+    "groups": {
+      "start": 49.296,
+      "end": 67.904
+    },
+    "styles": {
+      "start": 67.904,
+      "end": 76.509
+    },
+    "proof": {
+      "start": 76.509,
+      "end": 93.811
+    },
+    "role": {
+      "start": 93.811,
+      "end": 106.421
+    },
+    "result": {
+      "start": 106.421,
+      "end": 121.189
     }
   }
 }

@@ -1,32 +1,135 @@
 {
+  "lang": "es",
+  "total": 123.099,
   "lines": {
     "title": {
+      "scene": "title",
       "start": 0.8,
-      "show": "LEONEL CORTÉS · LUCENTDOCK"
+      "end": 6.025,
+      "show": "LEONEL CORTÉS · LUCENTDOCK",
+      "text": "Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos."
     },
-    "problem": {
-      "start": 9.0,
-      "show": "Tu barra muestra aplicaciones - no lo que te necesita"
+    "problem_now": {
+      "scene": "problem",
+      "start": 7.275,
+      "end": 16.369,
+      "show": "LA BARRA RECUERDA APLICACIONES",
+      "text": "Una barra normal recuerda lo que fijaste. No muestra qué necesita tu atención ahora: la próxima reunión, una batería agotada o un límite que elegiste."
     },
-    "react": {
-      "start": 26.0,
-      "show": "Cuando una reunión se acerca, la barra se reorganiza sola"
+    "problem_context": {
+      "scene": "problem",
+      "start": 16.919,
+      "end": 23.291,
+      "show": "EL CONTEXTO QUEDA REPARTIDO",
+      "text": "El contexto importante queda repartido entre calendarios, menús, avisos y ventanas que tienes que buscar."
+    },
+    "meeting_before": {
+      "scene": "meeting",
+      "start": 24.541,
+      "end": 32.987,
+      "show": "10 MINUTOS PARA LA REUNIÓN",
+      "text": "Diez minutos antes de la revisión de diseño, la barra cotidiana aún muestra música, clima, tiempo de pantalla y las aplicaciones habituales."
+    },
+    "meeting_change": {
+      "scene": "meeting",
+      "start": 33.537,
+      "end": 41.659,
+      "show": "CALENDARIO AL FRENTE · OCIO APARTE",
+      "text": "Entonces se reorganiza sola. El calendario pasa al frente, las distracciones se apartan y la barra se acomoda sin cubrir el trabajo."
+    },
+    "undo": {
+      "scene": "undo",
+      "start": 42.909,
+      "end": 51.563,
+      "show": "CADA CAMBIO SE PUEDE REVERTIR",
+      "text": "El cambio es una capa temporal, nunca una modificación. La actividad explica la regla y el motivo, mientras una acción restaura la barra cotidiana."
+    },
+    "groups_one": {
+      "scene": "groups",
+      "start": 52.813,
+      "end": 60.842,
+      "show": "APLICACIONES · MÓDULOS · AUTOMATIZACIONES",
+      "text": "Seis ideas cubren el producto: aplicaciones para ordenar, catorce módulos útiles y nueve automatizaciones que responden a tu día."
+    },
+    "groups_two": {
+      "scene": "groups",
+      "start": 61.392,
+      "end": 70.04,
+      "show": "ESTILOS · SEGURIDAD · PRIVACIDAD",
+      "text": "Tres estilos se unen a la seguridad visible y la privacidad inicial: sin cuenta, sin telemetría y con datos ficticios en las muestras públicas."
     },
     "styles": {
-      "start": 48.0,
-      "show": "Tres estilos - cristal hecho de tu fondo de pantalla"
+      "scene": "styles",
+      "start": 71.29,
+      "end": 79.541,
+      "show": "CRISTAL · CRISTAL LÍQUIDO · OSCURO",
+      "text": "Elige cristal, oscuro o cristal líquido, donde tu propio fondo se curva en el borde mediante una lente y no con un desenfoque genérico."
     },
-    "proof": {
-      "start": 66.0,
-      "show": "682 pruebas · compilación reproducible · compuertas presenciales"
+    "proof_tests": {
+      "scene": "proof",
+      "start": 80.791,
+      "end": 88.735,
+      "show": "682 PRUEBAS AUTOMÁTICAS",
+      "text": "Seiscientas ochenta y dos pruebas automáticas y una verificación reproducible permiten comparar cada archivo de forma exacta."
+    },
+    "proof_gates": {
+      "scene": "proof",
+      "start": 89.285,
+      "end": 96.557,
+      "show": "REPRODUCIBLE · SUPERVISADO · AUDITADO",
+      "text": "Compuertas presenciales a cinco escalas, auditorías independientes y una aprobación expresa ocurren antes de instalar."
     },
     "role": {
-      "start": 88.0,
-      "show": "Creado por Leonel Cortés dirigiendo sistemas de IA"
+      "scene": "role",
+      "start": 97.807,
+      "end": 108.22,
+      "show": "CREADO POR LEONEL CORTÉS",
+      "text": "Leonel Cortés dirige los sistemas de inteligencia artificial. Uno implementa, otro audita a ciegas, los hallazgos vuelven al constructor y solo Leonel opera la compuerta final."
     },
     "result": {
-      "start": 106.0,
-      "show": "LucentDock - descarga, verifica, revierte lo que sea"
+      "scene": "result",
+      "start": 109.47,
+      "end": 119.899,
+      "show": "COMPILA · VERIFICA · REVIERTE",
+      "text": "La primera versión se está preparando. Hasta entonces, compila desde el código fuente, revisa las pruebas, verifica el archivo y recuerda que cada cambio se puede revertir."
+    }
+  },
+  "scenes": {
+    "title": {
+      "start": 0,
+      "end": 6.575
+    },
+    "problem": {
+      "start": 6.575,
+      "end": 23.841
+    },
+    "meeting": {
+      "start": 23.841,
+      "end": 42.209
+    },
+    "undo": {
+      "start": 42.209,
+      "end": 52.113
+    },
+    "groups": {
+      "start": 52.113,
+      "end": 70.59
+    },
+    "styles": {
+      "start": 70.59,
+      "end": 80.091
+    },
+    "proof": {
+      "start": 80.091,
+      "end": 97.107
+    },
+    "role": {
+      "start": 97.107,
+      "end": 108.77
+    },
+    "result": {
+      "start": 108.77,
+      "end": 123.099
     }
   }
 }

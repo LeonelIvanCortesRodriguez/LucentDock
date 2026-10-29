@@ -1,5 +1,5 @@
 <picture>
-  <img src="docs/media/hero.gif" width="1280" alt="The LucentDock bar at the bottom of a desktop: a meeting reaches ten minutes away, and the dock rearranges itself - media, weather and screen-time widgets slide away, the calendar comes forward showing the meeting, and the bar settles into its calmer meeting layout.">
+  <img src="docs/media/hero.gif" width="1280" alt="A close view of LucentDock with the captions 10 minutes to a meeting and Calendar forward, leisure widgets away. The real dock animates from its everyday layout to a calmer meeting layout with the calendar promoted and leisure widgets removed.">
 </picture>
 
 # LucentDock

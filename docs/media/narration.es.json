@@ -1,14 +1,21 @@
 {
   "lang": "es",
-  "voice": "Microsoft Sabina Desktop (Windows SAPI, es-MX), velocidad 0, en la PC de compilación",
-  "note": "La narración no pronuncia nombres en inglés; los nombres aparecen solo en pantalla.",
+  "voice": "ef_dora",
+  "speed": 1.0,
+  "note": "La narración no pronuncia palabras en inglés; los nombres del producto aparecen solo en pantalla.",
   "lines": [
-    { "id": "title",   "start": 0,   "text": "Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
-    { "id": "problem", "start": 9,   "text": "Tu barra de tareas muestra tus aplicaciones. No muestra lo que te necesita ahora: la reunión que viene, la batería que se agota, los límites que tú mismo pusiste.", "show": "Tu barra muestra aplicaciones - no lo que te necesita" },
-    { "id": "react",   "start": 26,  "text": "Cuando una reunión está por empezar, la barra se reorganiza sola: el calendario pasa al frente, las distracciones se apartan, y un solo toque lo devuelve todo.", "show": "Cuando una reunión se acerca, la barra se reorganiza sola" },
-    { "id": "styles",  "start": 48,  "text": "Tres estilos, incluido el cristal líquido: el material de la barra es tu propio fondo de pantalla, curvado en el borde como por una lente.", "show": "Tres estilos - cristal hecho de tu fondo de pantalla" },
-    { "id": "proof",   "start": 66,  "text": "Cada versión pasa seiscientas ochenta y dos pruebas automáticas, se compila igual byte a byte, y cruza una compuerta presencial a cinco escalas de pantalla antes de instalarse.", "show": "682 pruebas · compilación reproducible · compuertas presenciales" },
-    { "id": "role",    "start": 88,  "text": "Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.", "show": "Creado por Leonel Cortés dirigiendo sistemas de IA" },
-    { "id": "result",  "start": 106, "text": "Descárgala, verifica su integridad tú mismo, y revierte cualquier cosa que haga. Toda la historia está a la vista.", "show": "LucentDock - descarga, verifica, revierte lo que sea" }
+    { "id": "title", "scene": "title", "text": "Esta es una barra inteligente para tu computadora, creada y verificada a la vista de todos.", "show": "LEONEL CORTÉS · LUCENTDOCK" },
+    { "id": "problem_now", "scene": "problem", "text": "Una barra normal recuerda lo que fijaste. No muestra qué necesita tu atención ahora: la próxima reunión, una batería agotada o un límite que elegiste.", "show": "LA BARRA RECUERDA APLICACIONES" },
+    { "id": "problem_context", "scene": "problem", "text": "El contexto importante queda repartido entre calendarios, menús, avisos y ventanas que tienes que buscar.", "show": "EL CONTEXTO QUEDA REPARTIDO" },
+    { "id": "meeting_before", "scene": "meeting", "text": "Diez minutos antes de la revisión de diseño, la barra cotidiana aún muestra música, clima, tiempo de pantalla y las aplicaciones habituales.", "show": "10 MINUTOS PARA LA REUNIÓN" },
+    { "id": "meeting_change", "scene": "meeting", "text": "Entonces se reorganiza sola. El calendario pasa al frente, las distracciones se apartan y la barra se acomoda sin cubrir el trabajo.", "show": "CALENDARIO AL FRENTE · OCIO APARTE" },
+    { "id": "undo", "scene": "undo", "text": "El cambio es una capa temporal, nunca una modificación. La actividad explica la regla y el motivo, mientras una acción restaura la barra cotidiana.", "show": "CADA CAMBIO SE PUEDE REVERTIR" },
+    { "id": "groups_one", "scene": "groups", "text": "Seis ideas cubren el producto: aplicaciones para ordenar, catorce módulos útiles y nueve automatizaciones que responden a tu día.", "show": "APLICACIONES · MÓDULOS · AUTOMATIZACIONES" },
+    { "id": "groups_two", "scene": "groups", "text": "Tres estilos se unen a la seguridad visible y la privacidad inicial: sin cuenta, sin telemetría y con datos ficticios en las muestras públicas.", "show": "ESTILOS · SEGURIDAD · PRIVACIDAD" },
+    { "id": "styles", "scene": "styles", "text": "Elige cristal, oscuro o cristal líquido, donde tu propio fondo se curva en el borde mediante una lente y no con un desenfoque genérico.", "show": "CRISTAL · CRISTAL LÍQUIDO · OSCURO" },
+    { "id": "proof_tests", "scene": "proof", "text": "Seiscientas ochenta y dos pruebas automáticas y una verificación reproducible permiten comparar cada archivo de forma exacta.", "show": "682 PRUEBAS AUTOMÁTICAS" },
+    { "id": "proof_gates", "scene": "proof", "text": "Compuertas presenciales a cinco escalas, auditorías independientes y una aprobación expresa ocurren antes de instalar.", "show": "REPRODUCIBLE · SUPERVISADO · AUDITADO" },
+    { "id": "role", "scene": "role", "text": "Leonel Cortés dirige los sistemas de inteligencia artificial. Uno implementa, otro audita a ciegas, los hallazgos vuelven al constructor y solo Leonel opera la compuerta final.", "show": "CREADO POR LEONEL CORTÉS" },
+    { "id": "result", "scene": "result", "text": "La primera versión se está preparando. Hasta entonces, compila desde el código fuente, revisa las pruebas, verifica el archivo y recuerda que cada cambio se puede revertir.", "show": "COMPILA · VERIFICA · REVIERTE" }
   ]
 }

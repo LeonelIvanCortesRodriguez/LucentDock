@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: Story; src: url("assets/story.woff2") format("woff2"); font-weight: 400 900; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #081018; }
+    body { font-family: Story, "Segoe UI", sans-serif; color: #f7fbff; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #081018; }
+    .ambient { position: absolute; inset: -260px; background:
+      radial-gradient(circle at 20% 25%, rgba(74,132,255,.25), transparent 34%),
+      radial-gradient(circle at 82% 74%, rgba(22,210,180,.18), transparent 32%),
+      linear-gradient(135deg, #081018, #101b2b 52%, #07121c); }
+    .grid { position: absolute; inset: 0; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent); }
+    .scene { position: absolute; inset: 0; padding: 220px 110px 90px; opacity: 0; overflow: hidden; }
+    .eyebrow { position: absolute; top: 72px; left: 112px; font-size: 23px; font-weight: 800; letter-spacing: .22em; color: #73d9ff; text-transform: uppercase; }
+    #headline { position: absolute; top: 102px; left: 110px; right: 110px; height: 112px; overflow: hidden; z-index: 30; }
+    #headline h1 { position: absolute; inset: 0; margin: 0; font-size: 70px; line-height: 1.1; letter-spacing: -.035em; font-weight: 850; white-space: nowrap; opacity: 0; }
+    .rule { position: absolute; left: 110px; right: 110px; top: 205px; height: 2px; background: linear-gradient(90deg, #5fbaff, rgba(95,186,255,.08)); z-index: 30; }
+    .visual { position: absolute; inset: 230px 100px 86px; }
+    .glass { background: rgba(12,20,31,.88); border: 1px solid rgba(156,205,255,.24); box-shadow: 0 34px 100px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06); }
+    .soft { color: #aab9ca; }
+    .accent { color: #73d9ff; }
+    .good { color: #79e7b6; }
+    .pill { border: 1px solid rgba(146,203,255,.35); border-radius: 999px; padding: 14px 24px; background: rgba(50,88,130,.18); }
+
+    #scene-title { display: grid; place-items: center; padding: 0; }
+    .brand { text-align: center; transform-origin: center; }
+    .brand-mark { width: 148px; height: 148px; margin: 0 auto 36px; border-radius: 40px; display: grid; place-items: center; font-size: 78px; font-weight: 900; color: #081018; background: linear-gradient(135deg, #7ce4ff, #6292ff); box-shadow: 0 30px 90px rgba(73,142,255,.35); }
+    .brand h2 { margin: 0; font-size: 132px; letter-spacing: -.065em; line-height: .92; }
+    .brand p { margin: 30px 0 0; font-size: 30px; color: #aab9ca; letter-spacing: .16em; text-transform: uppercase; }
+
+    .problem-orbit { position: absolute; left: 280px; top: 160px; width: 1160px; height: 460px; border: 1px solid rgba(115,217,255,.23); border-radius: 50%; }
+    .problem-core { position: absolute; left: 680px; top: 242px; width: 360px; height: 180px; border-radius: 42px; display: grid; place-items: center; font-size: 42px; font-weight: 850; text-align: center; }
+    .context-chip { position: absolute; font-size: 26px; font-weight: 750; }
+    .context-chip:nth-child(3) { left: 170px; top: 110px; }
+    .context-chip:nth-child(4) { right: 120px; top: 80px; }
+    .context-chip:nth-child(5) { left: 90px; bottom: 80px; }
+    .context-chip:nth-child(6) { right: 130px; bottom: 70px; }
+
+    .dock-stage { position: absolute; left: 0; right: 0; top: 70px; height: 500px; border-radius: 42px; overflow: hidden; display: grid; place-items: center; background: linear-gradient(180deg, #d9e5f6, #b9cbe0); }
+    .dock-stage img, .dock-stage video { position: absolute; width: 1760px; height: 500px; object-fit: fill; }
+    #meeting-after { opacity: 0; }
+    #meeting-transition { z-index: 4; }
+    .meeting-caption { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 8; font-size: 27px; font-weight: 800; color: #0b1620; background: rgba(255,255,255,.84); padding: 13px 24px; border-radius: 999px; }
+
+    .undo-frame { position: absolute; inset: 40px 0 20px; border-radius: 42px; overflow: hidden; background: #c7d5e7; }
+    .undo-frame video { width: 100%; height: 100%; object-fit: fill; }
+    .undo-note { position: absolute; right: 36px; bottom: 30px; font-size: 26px; font-weight: 800; color: #0b1620; background: #79e7b6; padding: 14px 22px; border-radius: 14px; }
+
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; height: 100%; }
+    .feature { position: relative; border-radius: 28px; overflow: hidden; min-height: 0; }
+    .feature img { width: 100%; height: 74%; object-fit: cover; object-position: top; display: block; opacity: .9; }
+    .feature b { position: absolute; left: 22px; bottom: 46px; font-size: 28px; }
+    .feature small { position: absolute; left: 22px; bottom: 20px; font-size: 19px; color: #9fb1c4; }
+
+    .styles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; height: 100%; align-items: center; }
+    .style { height: 500px; border-radius: 30px; padding: 28px; overflow: hidden; }
+    .style img { width: 100%; height: 375px; object-fit: cover; border-radius: 18px; background: #b7c7da; }
+    .style b { display: block; margin-top: 24px; font-size: 31px; }
+
+    .proof-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px; height: 100%; }
+    .proof-number { border-radius: 34px; display: grid; place-items: center; text-align: center; }
+    .proof-number strong { display: block; font-size: 230px; line-height: .9; letter-spacing: -.07em; color: #73d9ff; }
+    .proof-number span { font-size: 32px; font-weight: 800; }
+    .proof-list { display: grid; gap: 18px; }
+    .proof-item { border-radius: 24px; padding: 28px 32px; display: flex; align-items: center; gap: 22px; font-size: 27px; font-weight: 800; }
+    .check { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: #081018; background: #79e7b6; font-weight: 900; }
+
+    .role-map { position: absolute; inset: 40px 100px; }
+    .role-card { position: absolute; width: 360px; height: 180px; border-radius: 28px; display: grid; place-items: center; text-align: center; font-size: 29px; font-weight: 850; }
+    .role-card small { display: block; color: #9fb1c4; font-size: 20px; margin-top: 8px; }
+    #owner { left: 580px; top: 210px; border-color: rgba(121,231,182,.55); }
+    #builder { left: 70px; top: 80px; }
+    #auditor { right: 70px; top: 80px; }
+    #gate { left: 580px; bottom: 20px; }
+    .connector { position: absolute; height: 2px; width: 420px; background: linear-gradient(90deg, transparent, #73d9ff, transparent); transform-origin: center; }
+    .c1 { left: 350px; top: 210px; transform: rotate(18deg); }
+    .c2 { right: 350px; top: 210px; transform: rotate(-18deg); }
+    .c3 { left: 650px; top: 470px; transform: rotate(90deg); }
+
+    .result-card { position: absolute; left: 260px; right: 260px; top: 70px; bottom: 55px; border-radius: 40px; padding: 58px; }
+    .result-card h2 { margin: 0; font-size: 76px; letter-spacing: -.04em; }
+    .result-card p { font-size: 28px; line-height: 1.5; color: #aab9ca; max-width: 1050px; }
+    .result-actions { display: flex; gap: 16px; margin-top: 40px; }
+    .result-actions span { font-size: 25px; font-weight: 850; }
+    .hash { margin-top: 54px; height: 14px; border-radius: 7px; background: #1c2b3a; overflow: hidden; }
+    .hash i { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, #73d9ff, #79e7b6); transform-origin: left; }
+    .hash-label { margin-top: 16px; font: 20px ui-monospace, monospace; color: #79e7b6; }
+    .footer { position: absolute; left: 110px; right: 110px; bottom: 38px; display: flex; justify-content: space-between; color: #72859a; font-size: 18px; letter-spacing: .12em; text-transform: uppercase; z-index: 30; }
+  </style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__TOTAL__" data-width="1920" data-height="1080" data-fps="24" data-layout-allow-overlap>
+  <div class="ambient"></div><div class="grid"></div>
+  <div id="headline"></div><div class="rule"></div>
+
+  <section id="scene-title" class="scene"><div class="brand drift"><div class="brand-mark">L</div><h2>LucentDock</h2><p>context, brought forward</p></div></section>
+
+  <section id="scene-problem" class="scene"><div class="eyebrow">01 · the problem</div><div class="visual drift"><div class="problem-orbit"></div><div class="problem-core glass">Your taskbar<br>remembers apps</div><span class="context-chip pill">calendar</span><span class="context-chip pill">battery</span><span class="context-chip pill">limits</span><span class="context-chip pill">focus</span></div></section>
+
+  <section id="scene-meeting" class="scene"><div class="eyebrow">02 · meeting in ten minutes</div><div class="visual"><div class="dock-stage glass"><img id="meeting-before" src="assets/before.png"><video id="meeting-transition" src="assets/transition.mp4" muted playsinline data-start="__MEETING_VIDEO_START__" data-duration="__MEETING_VIDEO_DURATION__" data-track-index="2"></video><img id="meeting-after" src="assets/after.png"><div class="meeting-caption">real fixture capture · dock enlarged 2.6×</div></div></div></section>
+
+  <section id="scene-undo" class="scene"><div class="eyebrow">03 · the overlay reverses</div><div class="visual drift"><div class="undo-frame glass"><video id="undo-transition" src="assets/undo.mp4" muted playsinline data-start="__UNDO_VIDEO_START__" data-duration="__UNDO_VIDEO_DURATION__" data-track-index="2"></video><div class="undo-note">saved layout stays intact</div></div></div></section>
+
+  <section id="scene-groups" class="scene"><div class="eyebrow">04 · six product groups</div><div class="visual"><div class="feature-grid">
+    <article class="feature glass"><img src="assets/command-palette.png"><b>Apps</b><small>pin · group · preview</small></article>
+    <article class="feature glass"><img src="assets/flyout-calendar-glass.png"><b>Widgets</b><small>14 useful modules</small></article>
+    <article class="feature glass"><img src="assets/settings-automations.png"><b>Automations</b><small>9 undoable overlays</small></article>
+    <article class="feature glass"><img src="assets/dock-glass.png"><b>Styles</b><small>glass · liquid · dark</small></article>
+    <article class="feature glass"><img src="assets/settings-taskbar.png"><b>Safety</b><small>fails visible</small></article>
+    <article class="feature glass"><img src="assets/settings-privacy.png"><b>Privacy</b><small>no account · no telemetry</small></article>
+  </div></div></section>
+
+  <section id="scene-styles" class="scene"><div class="eyebrow">05 · material choices</div><div class="visual"><div class="styles">
+    <article class="style glass"><img src="assets/dock-glass-fullwidth.png"><b>Glass</b></article>
+    <article class="style glass"><img src="assets/dock-clear.png"><b>Liquid glass</b></article>
+    <article class="style glass"><img src="assets/dock-dark.png"><b>Dark</b></article>
+  </div></div></section>
+
+  <section id="scene-proof" class="scene"><div class="eyebrow">06 · release proof</div><div class="visual"><div class="proof-layout"><div class="proof-number glass"><div><strong id="test-count">682</strong><span>automated tests</span></div></div><div class="proof-list">
+    <div class="proof-item glass"><i class="check">✓</i>Reproducible build verification</div>
+    <div class="proof-item glass"><i class="check">✓</i>Attended gates at five scales</div>
+    <div class="proof-item glass"><i class="check">✓</i>Independent audits</div>
+    <div class="proof-item glass"><i class="check">✓</i>Explicit owner signoff</div>
+  </div></div></div></section>
+
+  <section id="scene-role" class="scene"><div class="eyebrow">07 · Leonel's role</div><div class="visual"><div class="role-map"><div class="connector c1"></div><div class="connector c2"></div><div class="connector c3"></div><div id="builder" class="role-card glass">Builder<small>implements</small></div><div id="auditor" class="role-card glass">Blind auditor<small>tests the result</small></div><div id="owner" class="role-card glass">Leonel Cortés<small>coordinates the systems</small></div><div id="gate" class="role-card glass">Final gate<small>owner only</small></div></div></div></section>
+
+  <section id="scene-result" class="scene"><div class="eyebrow">08 · download and verify</div><div class="visual drift"><div class="result-card glass"><h2>Build from source</h2><p>The first public release is being prepared. The repository already includes the product, the evidence, the verification steps, and the rule that every automation remains undoable.</p><div class="result-actions"><span class="pill">BUILD</span><span class="pill">VERIFY</span><span class="pill">UNDO</span></div><div class="hash"><i></i></div><div class="hash-label">SHA-256 · verified locally before install</div></div></div></section>
+
+  <div class="footer"><span>LucentDock · 1.3.2</span><span>built and verified in public</span></div>
+</div>
+<script>
+  const STORY = /*__STORY__*/null;
+  const tl = gsap.timeline({ paused: true });
+  tl.to({}, { duration: STORY.total }, 0);
+  gsap.set(".scene", { autoAlpha: 0 });
+  gsap.set("#meeting-transition", { autoAlpha: 0 });
+
+  tl.fromTo(".ambient", { x: -70, y: -40, scale: 1.02 }, { x: 70, y: 40, scale: 1.08, duration: STORY.total, ease: "sine.inOut" }, 0);
+  tl.fromTo(".grid", { x: 0, y: 0 }, { x: -160, y: -80, duration: STORY.total, ease: "none" }, 0);
+
+  for (const [name, bounds] of Object.entries(STORY.scenes)) {
+    const node = document.getElementById(`scene-${name}`);
+    tl.set(node, { autoAlpha: 1 }, bounds.start);
+    tl.fromTo(node, { opacity: 0 }, { opacity: 1, duration: .55, ease: "power2.out", immediateRender: false }, bounds.start);
+    tl.to(node, { opacity: 0, duration: .45, ease: "power2.in" }, Math.max(bounds.start + .7, bounds.end - .45));
+    tl.set(node, { autoAlpha: 0 }, bounds.end);
+    const drift = node.querySelectorAll(".drift");
+    if (drift.length) tl.fromTo(drift, { x: -12, y: 6, scale: 1.015 }, { x: 14, y: -8, scale: 1.045, duration: Math.max(.8, bounds.end - bounds.start), ease: "sine.inOut", immediateRender: false }, bounds.start);
+  }
+
+  const headline = document.getElementById("headline");
+  const entries = Object.entries(STORY.lines);
+  entries.forEach(([id, line], index) => {
+    const h = document.createElement("h1"); h.textContent = line.show; h.id = `head-${id}`; headline.appendChild(h);
+    tl.fromTo(h, { autoAlpha: 0, y: 72 }, { autoAlpha: 1, y: 0, duration: .45, ease: "power4.out", immediateRender: false }, line.start);
+    const out = Math.min(line.end + .65, entries[index + 1]?.[1].start - .15 ?? STORY.total - .4);
+    tl.to(h, { autoAlpha: 0, y: -45, duration: .3, ease: "power2.in" }, Math.max(line.start + .8, out));
+  });
+
+  const meetingChange = STORY.lines.meeting_change.start;
+  tl.to("#meeting-before", { opacity: .25, duration: .25 }, meetingChange - .2);
+  tl.set("#meeting-transition", { autoAlpha: 1 }, STORY.media.meeting.start);
+  tl.set("#meeting-transition", { autoAlpha: 0 }, STORY.media.meeting.start + STORY.media.meeting.duration);
+  tl.to("#meeting-after", { opacity: 1, duration: .45, ease: "power2.out" }, STORY.media.meeting.start + STORY.media.meeting.duration - .2);
+
+  const groupStart = STORY.scenes.groups.start;
+  tl.fromTo(".feature", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: .6, stagger: .1, ease: "power3.out", immediateRender: false }, groupStart + .25);
+  tl.to(".feature img", { scale: 1.08, y: -14, duration: STORY.scenes.groups.end - groupStart - .3, ease: "sine.inOut" }, groupStart + .2);
+
+  const styleStart = STORY.scenes.styles.start;
+  tl.fromTo(".style", { y: (i) => i % 2 ? 45 : -30, opacity: 0 }, { y: 0, opacity: 1, duration: .7, stagger: .13, ease: "power3.out", immediateRender: false }, styleStart + .15);
+  tl.to(".style img", { scale: 1.07, duration: STORY.scenes.styles.end - styleStart - .4, ease: "sine.inOut" }, styleStart + .2);
+
+  const proofStart = STORY.lines.proof_tests.start;
+  const count = { value: 0 };
+  tl.fromTo(count, { value: 0 }, { value: 682, duration: 1.6, ease: "power3.out", immediateRender: false, onUpdate: () => { document.getElementById("test-count").textContent = Math.round(count.value); } }, proofStart);
+  tl.fromTo(".proof-item", { x: 70, opacity: 0 }, { x: 0, opacity: 1, duration: .55, stagger: .18, ease: "power3.out", immediateRender: false }, proofStart + .35);
+  tl.to(".check", { scale: 1.14, repeat: 5, yoyo: true, duration: .38, stagger: .12 }, proofStart + 1.1);
+
+  const roleStart = STORY.scenes.role.start;
+  tl.fromTo(".role-card", { scale: .82, opacity: 0 }, { scale: 1, opacity: 1, duration: .65, stagger: .18, ease: "back.out(1.7)", immediateRender: false }, roleStart + .2);
+  tl.fromTo(".connector", { scaleX: 0 }, { scaleX: 1, duration: .7, stagger: .12, ease: "power2.out", immediateRender: false }, roleStart + .5);
+  tl.to("#owner", { boxShadow: "0 0 70px rgba(121,231,182,.35)", repeat: 5, yoyo: true, duration: .75 }, roleStart + 1.2);
+
+  const resultStart = STORY.scenes.result.start;
+  tl.fromTo(".result-actions span", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: .45, stagger: .15, immediateRender: false }, resultStart + .6);
+  tl.fromTo(".hash i", { scaleX: 0 }, { scaleX: 1, duration: Math.max(1, STORY.scenes.result.end - resultStart - 2), ease: "power1.inOut", immediateRender: false }, resultStart + 1.1);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines.main = tl;
+</script>
+</body>
+</html>

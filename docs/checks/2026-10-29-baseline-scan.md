@@ -18,11 +18,11 @@ Run on the fresh `gate6-lane1b` clone at `9c9a1db` before any lane change, with 
   attack pattern.
 - Privacy sweep: **FOUND 26, exit 1 — the expected CLEAN was wrong, but not because of a leak.**
   By rule: 24 × "account name", 1 × "local path", 1 × "home path". This machine's Windows account
-  is literally named "USER", and the sweep's account-name rule matches case-insensitively as a
+  uses a generic uppercase word, and the sweep's old account-name rule matched it case-insensitively as a
   whole word, so every ordinary English "user" in README/PRIVACY/ARCHITECTURE/audit prose flags.
   The development repo's own privacy scanner matches account names case-sensitively for exactly
   this reason. The other two hits quote generic paths in their own documentation (`PRIVACY.md`
-  describing the `C:\Users\` marker its preview scanner looks for; `tools/claude-terminal.ps1`
+  describing the drive-rooted profile marker its preview scanner looks for; `tools/claude-terminal.ps1`
   naming `~/.claude/settings.json`). Disposition: the two quoted-path lines get reworded in this
   lane's fix set 7; the 24 word-"user" hits are a tool limitation on this PC, reported to the
   ledger as a skills finding, and the final sweep is expected to print FOUND with only that class
