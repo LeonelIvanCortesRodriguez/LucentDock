@@ -1,6 +1,6 @@
 # LucentDock 1.3
 
-**LucentDock** is this project's public name; the code, evidence and process documents keep its internal codename **Strata**.
+**LucentDock** is this project's public name; the code, evidence and process documents keep its internal codename **Strata**; the in-code rename ships with a future verified release.
 
 **[Release process records](docs/process/)** · [Architecture](ARCHITECTURE.md) · [Privacy](PRIVACY.md) · [Preview gallery](previews/)
 
