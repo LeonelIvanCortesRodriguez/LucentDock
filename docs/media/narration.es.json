@@ -8,7 +8,7 @@
     { "id": "react",   "start": 26,  "text": "Cuando una reunión está por empezar, la barra se reorganiza sola: el calendario pasa al frente, las distracciones se apartan, y un solo toque lo devuelve todo.", "show": "Cuando una reunión se acerca, la barra se reorganiza sola" },
     { "id": "styles",  "start": 48,  "text": "Tres estilos, incluido el cristal líquido: el material de la barra es tu propio fondo de pantalla, curvado en el borde como por una lente.", "show": "Tres estilos - cristal hecho de tu fondo de pantalla" },
     { "id": "proof",   "start": 66,  "text": "Cada versión pasa seiscientas ochenta y dos pruebas automáticas, se compila igual byte a byte, y cruza una compuerta presencial a cinco escalas de pantalla antes de instalarse.", "show": "682 pruebas · compilación reproducible · compuertas presenciales" },
-    { "id": "role",    "start": 88,  "text": "Lo construye Leonel Cortés coordinando sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.", "show": "Creado por Leonel Cortes coordinando sistemas de IA" },
-    { "id": "result",  "start": 106, "text": "Descárgala, verifica su integridad tú mismo, y deshaz cualquier cosa que haga. Toda la historia está a la vista.", "show": "LucentDock - descarga, verifica, deshaz lo que sea" }
+    { "id": "role",    "start": 88,  "text": "Lo construye Leonel Cortés dirigiendo sistemas de inteligencia artificial: uno implementa, otro audita a ciegas, y solo Leonel puede operar la compuerta final.", "show": "Creado por Leonel Cortes dirigiendo sistemas de IA" },
+    { "id": "result",  "start": 106, "text": "Descárgala, verifica su integridad tú mismo, y revierte cualquier cosa que haga. Toda la historia está a la vista.", "show": "LucentDock - descarga, verifica, revierte lo que sea" }
   ]
 }
