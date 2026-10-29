@@ -1,4 +1,6 @@
-# Strata 1.3
+# LucentDock 1.3
+
+**LucentDock** is this project's public name; the code, evidence and process documents keep its internal codename **Strata**.
 
 > A smart dock for Windows: your apps, your day and your limits in one bar, which rearranges itself when something needs you.
 
@@ -89,6 +91,6 @@ Normal data lives under `%APPDATA%\Strata`, or `STRATA_DATA_ROOT` when explicitl
 - [ARCHITECTURE.md](ARCHITECTURE.md) — lifecycle, signals, automations, layout overlays, native integration, and failure boundaries.
 - [`tests/`](tests/) — the automated test suite; [`previews/`](previews/) — fixture-only screenshots of every style, flyout and Settings page.
 
-Each release candidate is also verified live (UI Automation, display scaling, keyboard, Explorer behavior and a 30-minute soak) and independently audited. That audit package is kept with the release candidate, outside this repository.
+Each release candidate is also verified live (UI Automation, display scaling, keyboard, Explorer behavior and a 30-minute soak) and independently audited. For the 1.3.2 release, the audit briefs, independent audits, closeout and final acceptance report are included, privacy-scrubbed, in [docs/process/](docs/process/).
 
-No license has been granted; the repository remains all rights reserved unless the owner chooses one.
+Licensed under the [MIT License](LICENSE).
