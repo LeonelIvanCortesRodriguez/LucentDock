@@ -7,7 +7,7 @@
 **A smart dock for Windows that rearranges itself when something needs you**, for people whose day
 is meetings, timers and limits, not just a row of app icons. Version 1.3.2.¹
 
-**[Download (first release coming)](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)** ·
+**[Download 1.3.2](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases/tag/v1.3.2)** ·
 [Watch the story (≈2 min)](docs/media/story-en.mp4) ·
 [En español](README.es.md) ·
 [Every feature](docs/FEATURES.md)
@@ -77,9 +77,34 @@ attended owner gates at five display scales → independent audits → signoff �
 
 ## Download and install
 
-The first release is being prepared, so **[Releases](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases)**
-is currently empty. For now, use the commands below to build and verify LucentDock from source.
-Download and asset-verification instructions will return here when a release exists.
+### Option 1: download the release
+
+1. Open **[LucentDock 1.3.2](https://github.com/LeonelIvanCortesRodriguez/LucentDock/releases/tag/v1.3.2)**
+   and download `Strata.exe`, `update.json` and `release-notes.txt`.
+2. In PowerShell, open the download folder and run:
+
+   ```powershell
+   (Get-FileHash .\Strata.exe -Algorithm SHA256).Hash
+   ```
+
+3. Confirm that the result is
+   `ADAD5A9A6A221D828895EE049184FD701361992660C26A4A499820CFB28A6CEE`, the same value shown in
+   `update.json` and `release-notes.txt`.
+4. Run `Strata.exe --install`. This is an unsigned preview, so Windows SmartScreen may warn on the
+   first run. After checking the hash, choose **More info**, then **Run anyway**.
+
+The hash confirms that the file arrived intact. It does not prove who published it. See
+[SECURITY.md](SECURITY.md) for the full trust boundary.
+
+### Option 2: build from source
+
+Requires the .NET 10 SDK.
+
+```powershell
+dotnet build src\Strata\Strata.csproj -c Release --no-incremental
+dotnet test tests\Strata.Tests\Strata.Tests.csproj -c Release
+dotnet publish src\Strata\Strata.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=false -p:DebugType=none -o dist
+```
 
 ## Leonel's role
 
@@ -96,16 +121,6 @@ A ≈2-minute telling of why LucentDock exists and how it is verified:
 **[English MP4](docs/media/story-en.mp4)** ([SRT captions](docs/media/story-en.srt)) ·
 **[Español MP4](docs/media/story-es.mp4)** ([subtítulos SRT](docs/media/story-es.srt)) ·
 **[Poster](docs/media/poster.png)**.
-
-## Build and verify it yourself
-
-Requires the .NET 10 SDK.
-
-```powershell
-dotnet build src\Strata\Strata.csproj -c Release --no-incremental
-dotnet test tests\Strata.Tests\Strata.Tests.csproj -c Release
-dotnet publish src\Strata\Strata.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=false -p:DebugType=none -o dist
-```
 
 Design and failure boundaries: [ARCHITECTURE.md](ARCHITECTURE.md). Data and network inventory:
 [PRIVACY.md](PRIVACY.md). Reporting problems: [SECURITY.md](SECURITY.md). License:
